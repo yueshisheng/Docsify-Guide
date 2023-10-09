@@ -2,7 +2,7 @@
 
 prctl可控制进程、进程中的线程、父子进程
 
-![image-20230423132839535](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230423132839535.png)
+![image-20230423132839535](G:\工作\项目\学习笔记\typora-user-images\image-20230423132839535.png)
 
 例：![image-20230423133003243](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230423133003243.png)
 
@@ -4152,3 +4152,5 @@ template<typename _Tp>
 **多个\0不会被合并，字符串结尾默认有一个\0**
 
 ![image-20231008171421047](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231008171421047.png)
+
+![image-20231009183012887](./images/image-20231009183012887.png)
