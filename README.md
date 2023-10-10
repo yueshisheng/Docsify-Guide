@@ -597,7 +597,9 @@ void TcpConnection::connectEstablished()
 
 **全局变量尽量不使用static，函数尽量使用static**
 
-#### 字符数组![image-20230524155357999](./images/image-20230524155357999.png)
+![image-20231010091752345](./images/image-20231010091752345.png)
+
+#### 字符数组
 
 字符数组本质上是一个地址，第一个字符的地址
 
@@ -2934,7 +2936,7 @@ int main (void)
 
 ![image-20230816160530871](./images/image-20230816160530871.png)
 
-#### ![image-20230816160538836](./images/image-20230816160538836.png)
+![image-20230816160538836](./images/image-20230816160538836.png)
 
 #### 全特化和偏特化
 
