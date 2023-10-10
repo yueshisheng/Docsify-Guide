@@ -9,6 +9,10 @@
   <meta name="keywords" content="玩">
   <meta name="author" content="岳士圣">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
+
+
 </head>
 <body>
 <div id="app"></div>
@@ -40,6 +44,22 @@
       },
       isExpected: true
     },
+    darklightTheme: {
+      defaultTheme: 'light',
+      siteFont: 'Source Sans Pro,Helvetica Neue,Arial,sans-serif',
+      codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+      bodyFontSize: '15px',
+      dark: {
+        background: 'rgb(28,32,34)',
+        highlightColor: '#e96900',
+        codeBackgroundColor: 'rgb(34,39,46)',
+        codeTextColor: '#b4b4b4',
+      },
+      light: {
+        highlightColor: '#e96900',
+      }
+    },
+
   }
 </script>
 <!-- Docsify v4 -->
@@ -48,5 +68,22 @@
 <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
 <!-- 搜索 -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<!-- 代码高亮 -->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-xml-doc.min.js"></script>
+<!-- 放大图片 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<!-- 白天黑夜-->
+<script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 </body>
 </html>
