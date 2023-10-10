@@ -9,6 +9,15 @@
   <meta name="keywords" content="玩">
   <meta name="author" content="岳士圣">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Gitalk css -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <!-- switch between day and night -->
+	<link 
+	rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+	title="docsify-darklight-theme"
+	type="text/css"
+	/>
 </head>
 <body>
   <div id="app"></div>
@@ -40,13 +49,45 @@
                 },
                 isExpected: true
             },
+		copyCode: {
+		  buttonText: '点击复制',
+		  errorText: '错误',
+		  successText: '复制成功'
+				},
+		
     }
   </script>
+  
+    <!-- plugin：gitalk -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'Github Application Client ID',
+      clientSecret: 'Github Application Client Secret',
+      repo: 'Github repo',
+      owner: 'Github repo owner',
+      admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false,
+      id: decodeURI(window.location.pathname),
+    })
+  </script>
+  
+	  <!-- switch between day and night -->
+	<script 
+		src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"
+		type="text/javascript">
+	</script>
+
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+   <!-- click to copy -->
+   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 字数插件 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
   <!-- 搜索 -->
