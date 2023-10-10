@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>别看了，全是废话</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+  <meta name="description" content="开发笔记">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="keywords" content="玩">
+  <meta name="author" content="岳士圣">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
@@ -13,10 +15,26 @@
   <script>
     window.$docsify = {
       name: '',
-      repo: ''
+      repo: '',
+	  count:{
+                countable: true,
+                position: 'top',
+                margin: '10px',
+                float: 'right',
+                fontsize:'0.9em',
+                color:'rgb(90,90,90)',
+                language:'chinese',
+                localization: {
+                    words: "",
+                    minute: ""
+                },
+                isExpected: true
+            },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 字数插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
 </body>
 </html>
