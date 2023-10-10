@@ -3741,15 +3741,15 @@ push_back(value_type&& __x)
 
 **static超出生命周期也保持恒定，类似全局变量**
 
-![image-20230912094620485](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912094620485.png)
+![image-20230912094620485](./images/image-20230912094620485.png)
 
-![image-20230912095421917](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912095421917.png)
+![image-20230912095421917](./images/image-20230912095421917.png)
 
-![image-20230912100105585](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912100105585.png)
+![image-20230912100105585](./images/image-20230912100105585.png)
 
 **const static和static const都一样，可在类内直接初始化**
 
-![image-20230912100304463](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912100304463.png)
+![image-20230912100304463](./images/image-20230912100304463.png)
 
 ***const*修饰的变量可以在运行时才初始化，而*constexpr*则一定会在编译期初始化。 *constexpr*才是名符其实的常量，所有的*constexpr*都是*const*。**
 
@@ -3798,33 +3798,33 @@ int main()
 
 #### 空类对象大小
 
-![image-20230912104518157](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912104518157.png)
+![image-20230912104518157](./images/image-20230912104518157.png)
 
 #### lamada表达式
 
-![image-20230912133928437](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912133928437.png)
+![image-20230912133928437](./images/image-20230912133928437.png)
 
 **如果用值捕获，不能修改原来的变量值，想要改变，用引用来捕获**
 
 **引用捕获只是创建了一个引用，值捕获是拷贝一个变量**
 
-![image-20230922102007681](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922102007681.png)
+![image-20230922102007681](./images/image-20230922102007681.png)
 
 **被捕获的变量在lamda表达式被创建的时候被拷贝**
 
-![image-20230922101725946](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922101725946.png)
+![image-20230922101725946](./images/image-20230922101725946.png)
 
 **对于右值引用，通过表达式来捕获，如下**
 
-![image-20230922102237736](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922102237736.png)
+![image-20230922102237736](./images/image-20230922102237736.png)
 
-![image-20230922102519949](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922102519949.png)
+![image-20230922102519949](./images/image-20230922102519949.png)
 
 **对于全局变量，可以直接访问**
 
 **lamada表达式必须是auto接收值，鼓励使用匿名表达**
 
-![image-20230912134050824](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912134050824.png)
+![image-20230912134050824](./images/image-20230912134050824.png)
 
 ```cpp
 int x =3;
@@ -3860,19 +3860,19 @@ auto f3 = [=, &x](){
 
 **通过友元，一个不同函数或另一个类中的成员函数可以访问类中的私有成员和保护成员。**
 
-![image-20230912135034282](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912135034282.png)
+![image-20230912135034282](./images/image-20230912135034282.png)
 
-![image-20230912135043887](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912135043887.png)
+![image-20230912135043887](./images/image-20230912135043887.png)
 
-![image-20230912135054882](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912135054882.png)
+![image-20230912135054882](./images/image-20230912135054882.png)
 
-![image-20230912135107605](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912135107605.png)
+![image-20230912135107605](./images/image-20230912135107605.png)
 
 #### 智能指针
 
 **shared_ptr是线程不安全的，因为指向数据和use_count的读写不是原子性的**
 
-![image-20230912135223187](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912135223187.png)
+![image-20230912135223187](./images/image-20230912135223187.png)
 
 **尽可能使用make_shared，不用new**
 
@@ -3928,11 +3928,11 @@ int main() {
 }
 ```
 
-![image-20230912140451564](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912140451564.png)
+![image-20230912140451564](./images/image-20230912140451564.png)
 
 **裸指针：常规指针**
 
-![image-20230912141831223](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912141831223.png)
+![image-20230912141831223](./images/image-20230912141831223.png)
 
 **reset和release的使用**
 
@@ -3963,11 +3963,11 @@ int main() {
       }///相比release，reset会释放内存，因为调用了删除器
 ```
 
-![image-20230912142326448](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912142326448.png)
+![image-20230912142326448](./images/image-20230912142326448.png)
 
 **release不会释放那块内存，只是返回那块内存的指针，必须要使用那个指针或者释放**
 
-**![image-20230912143300193](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912143300193.png)**
+**![image-20230912143300193](./images/image-20230912143300193.png)**
 
 #### 野指针、迷途指针
 
@@ -3979,11 +3979,11 @@ int main() {
 
 **裸指针：常规指针，裸指针的缺点如下**
 
-![image-20230912150213260](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912150213260.png)
+![image-20230912150213260](./images/image-20230912150213260.png)
 
 #### delete和析构函数
 
-![image-20230912152020930](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230912152020930.png)
+![image-20230912152020930](./images/image-20230912152020930.png)
 
 **类如果有显性的析构函数，如果定义一组对象，首地址会记录对象个数，必须用delete[]**
 
@@ -4095,17 +4095,17 @@ template<typename _Tp>
 
 ```
 
-![image-20230922101344332](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922101344332.png)
+![image-20230922101344332](./images/image-20230922101344332.png)
 
-![image-20230922101407529](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922101407529.png)
+![image-20230922101407529](./images/image-20230922101407529.png)
 
-![image-20230922101401206](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922101401206.png)
+![image-20230922101401206](./images/image-20230922101401206.png)
 
 #### STL的算法和容器
 
 **算法和容器都是直接操作迭代器来保证对方的相互独立**
 
-![image-20230920140440967](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230920140440967.png)
+![image-20230920140440967](./images/image-20230920140440967.png)
 
 #### 零拷贝
 
@@ -4113,35 +4113,35 @@ template<typename _Tp>
 
 **sendfile可以用于网络socket**
 
-![image-20230920174839323](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230920174839323.png)
+![image-20230920174839323](./images/image-20230920174839323.png)
 
-![image-20230920175219925](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230920175219925.png)
+![image-20230920175219925](./images/image-20230920175219925.png)
 
 **tee只能用于管道fd**
 
-![image-20230920175253516](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230920175253516.png)
+![image-20230920175253516](./images/image-20230920175253516.png)
 
-![image-20230920175300373](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230920175300373.png)
+![image-20230920175300373](./images/image-20230920175300373.png)
 
-![image-20230920175506723](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230920175506723.png)
+![image-20230920175506723](./images/image-20230920175506723.png)
 
 #### 委托构造
 
 **构造函数可以在同一个类中一个构造函数调用另一个构造函 数，从而达到简化代码的目的**
 
-![image-20230922102739354](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230922102739354.png)
+![image-20230922102739354](./images/image-20230922102739354.png)
 
 #### fgets和scanf总结
 
 **在键盘输入的所有字符，包括回车等，都会保留在缓冲区，fgets和scanf、getchar等都是优先在缓冲区读取数据，所以在使用前最后清空缓冲区**
 
-![image-20230927153042732](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230927153042732.png)
+![image-20230927153042732](./images/image-20230927153042732.png)
 
 **最多读取n-1个字符，第n个字符为'\n',第n-1个字符为回车符，缓冲区不会残留回车符**
 
 **与之对应scanf，只读取字符，会将第一个回车符残留在缓冲区，需要用getchar来清理，只匹配字符，遇到空格会中断**
 
-![image-20230927153802122](.\images\image-20230927153802122.png)
+![image-20230927153802122](./images/image-20230927153802122.png)
 
 #### sleep函数
 
@@ -4151,6 +4151,6 @@ template<typename _Tp>
 
 **多个\0不会被合并，字符串结尾默认有一个\0**
 
-![image-20231008171421047](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20231008171421047.png)
+![image-20231008171421047](./images/image-20231008171421047.png)
 
 ![image-20231009184016732](./images/image-20231009184016732.png)
